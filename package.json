@@ -4,7 +4,8 @@
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js",
-    "resetdb": "knex migrate:rollback && knex migrate:latest knex seed:run",
+    "resetdb": "npm run rollback && npm run migrate && npm run seed",
+    "migrate": "knex migrate:latest",
     "seed": "knex seed:run",
     "rollback": "knex migrate:rollback"
   },
